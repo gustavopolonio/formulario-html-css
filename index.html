@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" async></script>
+
+  <title>Criação de personagem</title>
+</head>
+<body>
+  <form class="create-character-form">
+    <div class="title-container">
+      <h1>Crie seu personagem</h1>
+      <span>Seja bem criativo :)</span>
+    </div>
+
+    <fieldset>
+      <div class="form-row">
+        <p class="input-container">
+          <label for="character-name">Nome</label>
+          <input type="text" id="character-name" name="character-name" minLength="3" maxLength="16" required />
+        </p>
+  
+        <p class="input-container">
+          <label for="last-name">Sobrenome</label>
+          <input type="text" id="last-name" name="last-name" minLength="3" maxLength="16" required />
+        </p>
+      </div>
+
+      <div class="form-row">
+        <p class="input-container">
+          <label for="birthdate">Data de nascimento</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+        </p>
+
+        <p class="input-container">
+          <label for="level">Level inicial</label>
+          <input type="number" id="level" name="level" min="0" max="80" required />
+        </p>
+      </div>
+
+      <p class="input-container">
+        <label for="character-class">Classe</label>
+        <select id="character-class" name="character-class" required>
+          <option value="" hidden>... Selecione uma ...</option>
+          <option value="warrior">Guerreiro</option>
+          <option value="ranger">Arqueiro</option>
+          <option value="mage">Mago</option>
+          <option value="assassin">Assassino</option>
+          <option value="paladin">Paladino</option>
+        </select>
+      </p>
+
+      <p class="input-container specific-skills-container">
+        <label class="specific-skills-title">
+          Quais são suas habilidades especiais?
+          <span>* No máximo 2</span>
+        </label>
+        <label for="healing">
+          <input type="checkbox" id="healing" name="skill" value="healing" />
+          Cura
+        </label>
+        <label for="poison">
+          <input type="checkbox" id="poison" name="skill" value="poison" />
+          Veneno
+        </label>
+        <label for="one-shot">
+          <input type="checkbox" id="one-shot" name="skill" value="one-shot" />
+          One shot
+        </label>
+        <label for="levitation">
+          <input type="checkbox" id="levitation" name="skill" value="levitation" />
+          Levitação
+        </label>
+        <label for="sword-slash">
+          <input type="checkbox" id="sword-slash" name="skill" value="sword-slash" />
+          Sword slash
+        </label>
+        <label for="fireball">
+          <input type="checkbox" id="fireball" name="skill" value="fireball" />
+          Fire ball
+        </label>
+      </p>
+
+      <p class="input-container input-range-container">
+        <label for="strength">Nível de força</label>
+        <input type="range" id="strength" name="strength" required class="input-range" />
+        <span class="input-range-value">0</span>
+      </p>
+
+      <p class="input-container input-range-container">
+        <label for="wisdom">Nível de inteligência</label>
+        <input type="range" id="wisdom" name="wisdom" required class="input-range" />
+        <span class="input-range-value">0</span>
+      </p>
+
+      <p class="input-container character-image-container">
+        <label for="character-image">
+          Envie uma foto do seu personagem
+          <span>* Opcional - Formatos aceitos: PNG, JPG e JPEG</span>
+        </label>
+        <input type="file" id="character-image" name="character-image" accept=".png, .jpg, .jpeg" />
+      </p>
+
+      <p class="input-container">
+        <label for="origin">Conte um pouco da origem do seu personagem</label>
+        <textarea id="origin" name="origin" minlength="30" maxLength="180" required></textarea>
+      </p>
+
+      <button type="submit">Criar personagem</button>
+    </fieldset>
+  </form>
+</body>
+</html>
